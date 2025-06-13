@@ -13,7 +13,34 @@
     <a href="getComputedStyle.html">getComputedStyle</a>
 
     <script>
-      
+        function ChatGen(names, questions, answers) {
+            const chatLog = [];
+            for (let i = 0; i < 10; i++) {
+                const time = `${Math.floor(Math.random() * 24)}:${String(Math.floor(Math.random() * 60)).padStart(2, '0')}`;
+                const name = names[Math.floor(Math.random() * names.length)];
+                const question = questions[Math.floor(Math.random() * questions.length)];
+                const answer = answers[Math.floor(Math.random() * answers.length)]
+                chatLog.push(`<span class="time">${time}</span> <span class="name">${name}</span> : ${question}`);
+                chatLog.push(`<span class="time">${time}</span> <span class="name">${name}</span> : ${answer}`);
+            }
+            return chatLog;
+        }
+
+        const names = ["Fred", "Ted", "Jenny", "Harold"];
+        const questions = ["How are you?", "Is everything ok?", "How it's doing?"];
+        const answers = ["Everything is good!", "Fine, thank you", "It's okay."];
+
+        const chat = ChatGen(names, questions, answers);
+
+        const chatContainer = document.getElementById("chat");
+
+        let chatHTML = "";
+        chat.forEach(line => {
+            chatHTML += `<p>${line}</p>`;
+        });
+        chatContainer.innerHTML = chatHTML;
     </script>
+
+
   </body>
 </html>
