@@ -1,1 +1,42 @@
+* {
+    font-family: 'Monaco', monospace;
+}
 
+body {
+    background-color: rgb(97, 255, 164);
+}
+
+table {
+    width: 35%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+button {
+    color: black;
+    padding: 15px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    background-color: forestgreen;
+}
+
+.time {
+    background-color: rgb(63, 117, 86);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 8px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.name {
+    background-color: rgb(63, 117, 86);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 8px;
+    margin-right: 5px;
+    display: inline-block;
+}
