@@ -1,9 +1,43 @@
-<!DOCTUPE html>
-<html>
-  <head>
-    
-  </head>
-  <body>
-    
-  </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 100 table</title>
+</head>
+<body>
+    <style>
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+
+    <h1>The 100 table</h1>
+
+    <table id="myTable">
+        <tbody></tbody>
+    </table>
+
+    <script>
+        const tableBody = document.getElementById('myTable');
+        const colors = ['#FF0000', '#00FF00', '#0099FF', '#FFFF00', '#9966FF', '#FF6633', '#CC0099', '#996633', '#666666', '#99FFCC'];
+
+        for (let i = 0; i < 100; i++) {
+            const row = tableBody.insertRow();
+            for (let j = 0; j < 100; j++) {
+                const cell = row.insertCell();
+
+                const colorIndex = (i * 100 + j) % colors.length;
+                cell.style.backgroundColor = colors[colorIndex];
+                cell.onclick = function() {
+                    alert(`OnClick`);
+                };
+            }
+            
+        }
+    </script>
+
+</body>
 </html>
