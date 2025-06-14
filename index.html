@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <body>
+<body>
     <h1> Главная страница </h1>
     <p><a href="index.html">Главная</a></p>
     <p><a href="page1.html">Страница 1</a></p>
@@ -39,8 +39,17 @@
             chatHTML += `<p>${line}</p>`;
         });
         chatContainer.innerHTML = chatHTML;
+        <canvas id="myCanvas" width="200" height="100"></canvas>;
+    </script>
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.moveTo(20, 20);
+        ctx.lineTo(180, 80);
+        ctx.lineTo(10, 80);
+        ctx.fillStyle = "blue";
+        ctx.fill();
     </script>
 
-
-  </body>
+</body>
 </html>
