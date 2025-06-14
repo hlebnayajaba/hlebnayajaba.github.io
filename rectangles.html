@@ -1,9 +1,119 @@
-<!DOCTUPE html>
+
+<!DOCTYPE html>
 <html>
-  <head>
-    
-  </head>
-  <body>
-    
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объекты на основе классов</title>
+    <style>
+        .rectangle {
+            position: absolute;
+            background-color: lightskyblue;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        class Rectangle {
+            constructor(x, y, width, height, text) {
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+                this.text = text;
+                this.element = this.createElement();
+            }
+
+            createElement() {
+                const rect = document.createElement('div');
+                rect.classList.add('rectangle');
+                rect.style.left = this.x + 'px';
+                rect.style.top = this.y + 'px';
+                rect.style.width = this.width + 'px';
+                rect.style.height = this.height + 'px';
+                rect.textContent = this.text;
+                return rect;
+            }
+
+            render(containerId) {
+                const container = document.getElementById(containerId);
+                container.appendChild(this.element);
+            }
+        }
+
+        const rect1 = new Rectangle(50, 50, 100, 50, "Class 1");
+        const rect2 = new Rectangle(200, 100, 120, 60, "Class 2");
+        const rect3 = new Rectangle(350, 150, 80, 40, "Class 3");
+
+        rect1.render("container");
+        rect2.render("container");
+        rect3.render("container");
+
+        // =====================================================================
+        function createRectangle(x, y, width, height, text) {
+            return {
+                x: x,
+                y: y,
+                width: width,
+                height: height,
+                text: text,
+                element: null,
+
+                createElement: function() {
+                    const rect = document.createElement('div');
+                    rect.classList.add('rectangle');
+                    rect.style.left = this.x + 'px';
+                    rect.style.top = this.y + 'px';
+                    rect.style.width = this.width + 'px';
+                    rect.style.height = this.height + 'px';
+                    rect.textContent = this.text;
+                    this.element = rect;
+                },
+
+                render: function(containerId) {
+                    const container = document.getElementById(containerId);
+                    if (!this.element) {
+                        this.createElement();
+                    }
+                    container.appendChild(this.element);
+                }
+            };
+        }
+        const rect4 = createRectangle(50, 250, 100, 50, "Function 1");
+        rect4.render("container");
+
+        // =====================================================================
+
+        const rect5 = {
+            x: 200,
+            y: 300,
+            width: 120,
+            height: 60,
+            text: "Literal 1",
+            createElement: function() {
+                const rect = document.createElement('div');
+                rect.classList.add('rectangle');
+                rect.style.left = this.x + 'px';
+                rect.style.top = this.y + 'px';
+                rect.style.width = this.width + 'px';
+                rect.style.height = this.height + 'px';
+                rect.textContent = this.text;
+                return rect;
+            },
+            render: function(containerId) {
+                const container = document.getElementById(containerId);
+                const element = this.createElement();
+                container.appendChild(element);
+            }
+        };
+
+        rect5.render("container");
+    </script>
+</body>
 </html>
