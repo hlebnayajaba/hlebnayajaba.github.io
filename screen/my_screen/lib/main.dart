@@ -89,6 +89,21 @@ class SignUpScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.black87),
               ),
             ),
+            const SizedBox(height: 12),
+
+            ElevatedButton.icon(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 0, 68, 124),
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              icon: const Icon(Icons.facebook),
+              label: const Text('Continue with Facebook'),
+            ),
             const SizedBox(height: 24),
 
             const Row(
