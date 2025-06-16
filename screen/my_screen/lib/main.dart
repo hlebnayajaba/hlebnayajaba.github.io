@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-///import 'package:flutter/services.dart';
+
 
 void main() {
   runApp(const FitlyApp());
@@ -33,7 +33,6 @@ class SignUpScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const SizedBox(height: 60),
-            // Logo and Tagline
             const Column(
               children: [
                 Text(
@@ -56,7 +55,6 @@ class SignUpScreen extends StatelessWidget {
             ),
             const SizedBox(height: 40),
 
-            // Apple Sign Up Button
             ElevatedButton.icon(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
@@ -72,7 +70,6 @@ class SignUpScreen extends StatelessWidget {
             ),
             const SizedBox(height: 12),
 
-            // Google Sign Up Button
             OutlinedButton.icon(
               onPressed: () {},
               style: OutlinedButton.styleFrom(
@@ -94,7 +91,6 @@ class SignUpScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
 
-            // Divider with "or" text
             const Row(
               children: [
                 Expanded(child: Divider()),
@@ -110,7 +106,6 @@ class SignUpScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
 
-            // Email Field
             TextField(
               decoration: InputDecoration(
                 labelText: 'Email',
@@ -126,7 +121,6 @@ class SignUpScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // Password Field
             TextField(
               decoration: InputDecoration(
                 labelText: 'Password',
@@ -142,7 +136,6 @@ class SignUpScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
 
-            // Continue Button
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
@@ -160,7 +153,6 @@ class SignUpScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // Forgot Password
             TextButton(
               onPressed: () {},
               child: const Text(
@@ -170,7 +162,6 @@ class SignUpScreen extends StatelessWidget {
             ),
             const SizedBox(height: 32),
 
-            // Terms and Conditions
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: Text(
