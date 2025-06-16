@@ -40,7 +40,7 @@ class SignUpScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
-                    color: Colors.green,
+                    color: Colors.black,
                   ),
                 ),
                 SizedBox(height: 8),
@@ -49,6 +49,7 @@ class SignUpScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                     color: Colors.grey,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
@@ -62,7 +63,7 @@ class SignUpScreen extends StatelessWidget {
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(40),
                 ),
               ),
               icon: const Icon(Icons.apple),
@@ -75,7 +76,7 @@ class SignUpScreen extends StatelessWidget {
               style: OutlinedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(40),
                 ),
                 side: const BorderSide(color: Colors.grey),
               ),
@@ -87,6 +88,7 @@ class SignUpScreen extends StatelessWidget {
               label: const Text(
                 'Sign up with Google',
                 style: TextStyle(color: Colors.black87),
+                
               ),
             ),
             const SizedBox(height: 12),
@@ -98,7 +100,7 @@ class SignUpScreen extends StatelessWidget {
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(40),
                 ),
               ),
               icon: const Icon(Icons.facebook),
@@ -114,6 +116,7 @@ class SignUpScreen extends StatelessWidget {
                   child: Text(
                     'or continue with email',
                     style: TextStyle(color: Colors.grey),
+                    
                   ),
                 ),
                 Expanded(child: Divider()),
@@ -125,7 +128,7 @@ class SignUpScreen extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: 'Email',
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(40),
                 ),
                 contentPadding: const EdgeInsets.symmetric(
                   horizontal: 16,
@@ -140,7 +143,7 @@ class SignUpScreen extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: 'Password',
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(40),
                 ),
                 contentPadding: const EdgeInsets.symmetric(
                   horizontal: 16,
@@ -154,11 +157,11 @@ class SignUpScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green,
+                backgroundColor: const Color.fromARGB(255, 0, 53, 2),
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(40),
                 ),
               ),
               child: const Text(
@@ -172,7 +175,7 @@ class SignUpScreen extends StatelessWidget {
               onPressed: () {},
               child: const Text(
                 'Forgot password?',
-                style: TextStyle(color: Colors.green),
+                style: TextStyle(color: Colors.black),
               ),
             ),
             const SizedBox(height: 32),
